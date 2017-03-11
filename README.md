@@ -2,18 +2,24 @@
 
 For use with Unreal Engine 4 generated Heightmaps, pngs mainly, since I don't think ImageMagick handles r16 files.
 
-- ruby app.rb Filename PartitionCount
-- PartitionCount is just the number of pieces to split it into. 
+```
+$ ruby app.rb Filename PartitionCount
+PartitionCount is just the number of pieces to split it into. 
+```
 ###Example used by me for the largest UE4 Landscape 
-- ruby app.rb Heightmap.png 16
-- generates a 16 * 16 grid of heightmaps, with a 1 pixel overlap.
+```
+$ ruby app.rb Heightmap.png 16
+generates a 16 * 16 grid of heightmaps, with a 1 pixel overlap.
+```
 
 ##Depends on an operating system installation of ImageMagick
 Also of course depends on typical ruby dependencies for installation.
 
 ###On debian/ubuntu systems:
-- sudo apt-get install imagemagick
-- sudo apt-get install libmagickwand-dev
+```
+$ sudo apt-get install imagemagick
+$ sudo apt-get install libmagickwand-dev
+```
 
 ###For Windows 10:
 Just use the ubuntu for windows 10 feature, seriously.
