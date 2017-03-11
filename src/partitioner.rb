@@ -41,7 +41,7 @@ class Partitioner
     chunk_size = step_size + 1
     (0..(@partition_count - 1)).each do |y|
       (0..(@partition_count - 1)).each do |x|
-        subsection = @image.crop(step_size * x + 1, step_size * y + 1, chunk_size, chunk_size)
+        subsection = @image.crop(step_size * x, step_size * y, chunk_size, chunk_size)
           subsection.format = 'png'
           full_path = "#{@output_directory}/Heightmap_x#{x}_y#{y}.png"
           subsection.write(full_path)
