@@ -20,6 +20,14 @@ class Partitioner
       puts "Image dimensions must be identical powers of 2"
       return false
     end
+    if (@image.columns / @partition_count) != 0
+      puts "Image width must be exactly divisble by the partition count"
+      return false
+    end
+    if (Math.log2(@partition_count) % 1) != 0
+      puts "Partition count must be an exact power of 2"
+      return false
+    end
     true
   end
 
